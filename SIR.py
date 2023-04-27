@@ -96,6 +96,8 @@ for i in initial_node:
 
 for nid in graph_node:
     Graph.Add(nid)
-sub = snap.ConvertSubGraph(snap.PNEANet, net, Graph)
+sub_graph = snap.ConvertSubGraph(snap.PNEANet, net, Graph)
 
-snap.SaveGViz(sub, "SIRsub.dot", "SIR simulation subnet", True, color)
+snap.SaveGViz(sub_graph, "SIR_Model.dot", "SIR simulation", True, color)
+#use the following command to convet the .dot file into png file
+#dot -Tpng SIRsub.dot -o filename.png
